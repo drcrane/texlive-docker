@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+\usepackage{scl}
+\usepackage{times}
+\usepackage{url}
+\usepackage{latexsym}
+\usepackage{gensymb}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{lastpage}
+%\usepackage{lscape}
+\usepackage{pdflscape}
+\usepackage{amsmath}
+
+\usepackage{fontspec, xunicode, xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[Path = ./,
+ Extension = .ttf,
+ UprightFont = *-Regular,
+ BoldFont = *-Bold,
+ ItalicFont = *-Italic
+ ]
+{URW_Palladio_ITU}
+\raggedbottom
+
+\pagestyle{fancy}
+\fancyhf{}
+%\rfoot{Page \thepage}
+% Two side option??
+%\fancyfoot[RE,LO]{Page \thepage}
+\fancyfoot[C]{Page \thepage~of \pageref{LastPage}}
+\renewcommand{\footrulewidth}{0.5pt}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{firststyle}
+{
+   \fancyhf{}
+%   \fancyfoot[C]{\footnotesize Page \thepage\ of \pageref{LastPage}}
+%   \rfoot{Page \thepage}
+%   \fancyfoot[RE,LO]{Page \thepage}
+   \fancyfoot[C]{Page \thepage~of \pageref{LastPage}}
+}
+
+\title{{\huge TeXLive in a Container with Alpine Linux}\\{\small Native Install Replacement}}
+
+\author{drcrane \\
+July 2023}
+
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This is a useless document that is used as an example for texlive on Alpine Linux docker
+container.
+\end{abstract}
+
+\thispagestyle{firststyle}
+
+\section{Introduction}
+
+\subsection{Missing Parts}
+
+This document uses {\tt gensymb} and {\tt lastpage} which are not included by default.
+It also makes use of XeLaTeX... for some reason.
+
+\section{Resources}
+
+The project will require:
+
+\begin{itemize}
+\item 1 suitably capable engineer
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,5 @@
+mytexmf/
+*.pdf
+*.log
+*.aux
+*.out
