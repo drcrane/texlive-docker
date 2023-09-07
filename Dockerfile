@@ -1,10 +1,10 @@
-FROM alpine:3.17
-
-RUN adduser -D -g users user && \
-	mkdir -p /home/user && \
-	chown -R user:users /home/user
+FROM alpine:3.18
 
 RUN apk add --no-cache texlive-xetex
+
+RUN adduser -D -g users -u 1001 user && \
+	mkdir -p /home/user && \
+	chown -R user:users /home/user
 
 USER user
 RUN mkdir /home/user/bin
