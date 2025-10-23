@@ -1,6 +1,6 @@
-FROM alpine:3.18
+FROM alpine:3.22
 
-RUN apk add --no-cache texlive-xetex
+RUN apk add --no-cache texlive-xetex texmf-dist-latexrecommended
 
 RUN adduser -D -g users -u 1001 user && \
 	mkdir -p /home/user && \
