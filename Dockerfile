@@ -9,8 +9,8 @@ RUN adduser -D -g users -u 1001 user && \
 USER user
 RUN mkdir /home/user/bin
 COPY compileall.sh /home/user/bin
-ENV HOME /home/user
-ENV PATH "/home/user/bin:${PATH}"
+ENV HOME=/home/user
+ENV PATH="/home/user/bin:${PATH}"
 WORKDIR /home/user
 CMD ["/bin/ash"]
 
